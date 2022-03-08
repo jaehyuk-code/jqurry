@@ -1,1 +1,1 @@
-# jqurry
+# jquery
