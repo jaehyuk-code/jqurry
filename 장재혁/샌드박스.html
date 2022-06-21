@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:50%;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>회사 소개</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="100.jpg" >
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">회사소개</a></li>
+				<li><a href="#movie" data-rel="dialog">영상</a></li>
+			
+				<li><a href="#gallery">사진</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1> 샌드박스 네트워크</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>회사소개</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="100.jpg">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>회사이름</h3>
+					<p>샌드박스네트워크</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>회사소개</h3>
+					<p>
+						샌드박스 네트워크는 도티와 그의친구 이필성이 함께 창업한 대한민국의 MCN이다 MCN은(Milti Chanel Network)의 약자로 인터넷 스타들의
+						콘텐츠를 우통하고 저작권 관리, 광고 등 개인 방송을 하는 사람들이 하기 힘든 부분을 매니지먼트 해주면서 관리 등을 도와주는 회사이다. 현재 500며 이상의 크리에이터와
+						연예인들이 샌드박스 네트워크에 소속되어 있다. 대표적 유병재가 샌드박스 소속 연예인이다. 샌드박스 네트워크'는 당시 구성원들이 주로 플레이했던 샌드박스 게임인 마인크래프트처럼 크리에이터들이 좀 더 자유로운 환경에서 일할 수 있기를 바라며 지은 이름이라고 한다. 샌드박스 게이밍, 샌드박스 스토어등 여러 분야로 나가고 있다.
+					</p>
+				</div>
+				<div data-role="collapsible" >
+					<h3>연혁</h3>
+					<p>2014 11월 멀티채널 네트워크 전문 기업 샌드박스 네트워크 설립<br>
+						2015 6월 나희선(도티) 는 샌드박스의 최고 콘텐츠 책익자 임명
+					</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1> </h1>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>회사 소개 영상</h1>
+		</div>
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-a">회사소개</div><br/>
+			<li><iframe width="500" height="300" src="https://www.youtube.com/embed/94Uyymok6to" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			<div class="ui-bar ui-bar-a">샌드박스소속 크리에이터</div><br/>
+			<li><<iframe width="500" height="300" src="https://www.youtube.com/embed/4A_sAAjZkBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</video></li>
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+	
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header">
+			<h1></h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">과제곡(교수님죄송합니다)-이무진</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="1.mp3" type="audio/mp3">
+			</audio>	
+			<img src="45.jpg" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+		</div>
+	</div>
+
+
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>회사 관련 사진</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture">
+            <li><a href="do1.jpg" rel="external"><img src="do1.jpg" /></a></li>
+				<li><a href="san1.jpg" rel="external"><img src="san1.jpg" /></a></li>	
+				<li><a href="box.jpg" rel="external"><img src="box.jpg" /></a></li>	
+				<li><a href="444.jpg" rel="external"><img src="444.jpg" /></a></li>	
+				
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1></h1>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>

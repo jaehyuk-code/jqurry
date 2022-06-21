@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/> 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="C:\Users\wkdeh\OneDrive\바탕 화면\mje\JJH\jquery.zoom.js" ></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		//사진 감추기
+		$("#hideBtn").click(function() {
+			//hide(시간, 후속작업)
+			$("#imgView").hide(2000, function() {
+				$("#stateInfo").html("<font size=7 color='lime'>"
+						+"밀크 없다!"+"</font>");
+			});
+		});
+		
+		//사진 보기
+		$("#showBtn").click(function() {
+			$("#imgView").show(2000);
+		});
+		
+	});
+</script>
+<script>
+	  function test() {
+        document.getElementById("test_obj").style.filter = "brightness(50%)";
+    }
+ </script>
+<script>
+	$(document).ready(function(){
+		$("#zoom").zoom();
+	});
+</script>
+ 
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:50%;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>장재혁 포트폴리오</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="43.jpg" id="imgView" height="200px" width="200px">
+	<input type="button" value="사진 감추기" id="hideBtn">
+	<input type="button" value="사진 보기" id="showBtn">
+	
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">자기소개</a></li>	
+				<li><a href="#movie" data-rel="dialog">영상</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">좋아하는 음악</a></li>
+				<li><a href="#gallery">사진</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1> 웹 개발자 장재혁</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>자기소개</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="34.jpg">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>이름</h3>
+					<p>장재혁</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>자기소개</h3>
+					<p>
+						안녕하십니까 저는 21살 장재혁 입니다. 고등학교 때 컴퓨터에 관심이 생겨 컴퓨터학과에 진학하여 처음으로 코딩이라는 것을 해봤습니다. 생각보다
+						영어도 많고 언어도 많아서 어려웠습니다. C언어라던가 자바스크립트 등을 배우고 결과물을 만들면서 코딩의 재미와
+						처음 코딩 중 생긴 오류를 스스로 찾아서 고첫을 때 정말 재미있었고 보람 찾습니다. 제가 회사 취직하게 된다면 항상 밝은
+						분위기의 일이 재밌어서 열심히 하게 되는 모습을 보실 수 있습니다.
+					</p>
+				</div>
+				<div data-role="collapsible" >
+					<h3>포부</h3>
+					<p>저는 항상 밝은 분위기와 일을 재미있게 하여 다같이 즐겁게 아주 좋은 결과물을 만들수있습니다.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>  개 같이 공부해서 짐승 같이 놀자</h1>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>영상소개</h1>
+		</div>
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-a">내가 좋아하는 영상</div><br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k0FJeq5Uo_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			<div class="ui-bar ui-bar-a">작업영상</div><br/>
+			<li><video controls width="50%" preload="metadata">
+				<source src="jjh.mp4" type="video/mp4">
+			</video></li>
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+	
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header">
+			<h1></h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">과제곡(교수님죄송합니다)-이무진</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="1.mp3" type="audio/mp3">
+			</audio>	
+			<img src="45.jpg" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+		</div>
+
+	</div>
+
+
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>내 사진 ㅎㅎ</h1>
+		</div>
+		<div data-role="content">
+           <img id="test_obj" src="11.jpg">
+
+<button onclick="test()">이미지 어둡게 하기</button>
+ <div id="zoom" style="text-align:center;">
+	<img src="99.jpg" style="width:200px;">
+	</div>
+  
+</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-theme="b">
+
+			<h1>부끄럽네요_장재혁</h1>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>
